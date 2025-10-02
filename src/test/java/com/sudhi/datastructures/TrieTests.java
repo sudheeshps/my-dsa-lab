@@ -1,4 +1,4 @@
-package test.java.com.sudhi.datastructures;
+package test.java.com.sudhi.dsa.datastructures;
 
 import main.java.com.sudhi.dsa.datastructures.Trie;
 import org.junit.Assert;
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class TrieTests {
     @Test
-    public void searchTest() {
+    public void givenTrie_whenSearch_thenReturnsCorrectResult() {
         String[] words = {"apple", "apps", "api", "ba", "base"};
         Trie trie = new Trie();
         for (String word: words) {
@@ -18,7 +18,7 @@ public class TrieTests {
         Assert.assertTrue(trie.search("base"));
     }
     @Test
-    public void startWithTest() {
+    public void givenTrie_whenStartsWith_thenReturnsCorrectResult() {
         String[] words = {"apple", "apps", "api", "ba", "base"};
         Trie trie = new Trie();
         for (String word: words) {

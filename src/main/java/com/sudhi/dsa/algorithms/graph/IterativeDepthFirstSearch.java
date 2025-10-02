@@ -1,6 +1,6 @@
 package main.java.com.sudhi.dsa.algorithms.graph;
 
-import main.java.com.sudhi.dsa.datastructures.graph.Graph;
+import main.java.com.sudhi.dsa.datastructures.Graph;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package test.java.com.sudhi.datastructures;
+package test.java.com.sudhi.dsa.datastructures;
 
 import main.java.com.sudhi.dsa.datastructures.Trie2;
 import org.junit.Assert;
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class Trie2Tests {
     @Test
-    public void countWordsTest() {
+    public void givenTrie_whenCountWords_thenCorrectCount() {
         Trie2 trie2 = new Trie2();
         String[] words = {"apple", "apple", "apps", "apps", "word", "wo", "ap"};
         for (String word: words) {
@@ -19,7 +19,7 @@ public class Trie2Tests {
         Assert.assertEquals(0, trie2.countOfWord("world"));
     }
     @Test
-    public void countPrefixTest() {
+    public void givenTrie_whenCountPrefix_thenCorrectCount() {
         Trie2 trie2 = new Trie2();
         String[] words = {"apple", "apple", "apps", "apps", "word", "wo", "ap"};
         for (String word: words) {
@@ -31,7 +31,7 @@ public class Trie2Tests {
         Assert.assertEquals(0, trie2.countStartsWith("foo"));
     }
     @Test
-    public void eraseWordTest() {
+    public void givenTrie_whenEraseWord_thenWordIsRemoved() {
         Trie2 trie2 = new Trie2();
         String[] words = {"apple", "apple", "apps", "apps", "word", "wo", "ap"};
         for (String word: words) {

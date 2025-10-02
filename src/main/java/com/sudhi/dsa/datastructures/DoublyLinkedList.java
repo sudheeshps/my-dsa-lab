@@ -1,4 +1,4 @@
-package com.sudhi.dsa.datastructures;
+package main.java.com.sudhi.dsa.datastructures;
 
 public class DoublyLinkedList<T> {
     private Node<T> head;
