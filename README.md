@@ -43,7 +43,7 @@ Here you'll find the core data structures, each with its own detailed `README.md
 
 | Data Structure | Description |
 | :--- | :--- |
-|  배열 [Array](./src/main/java/com/sudhi/dsa/datastructures/Array/README.md) | A basic fixed-size collection of elements. |
+| 🔢 [Array](./src/main/java/com/sudhi/dsa/datastructures/Array/README.md) | A basic fixed-size collection of elements. |
 | 🌳 [AVLTree](./src/main/java/com/sudhi/dsa/datastructures/AVLTree/README.md) | A self-balancing binary search tree. |
 | 🅱️ [BTree](./src/main/java/com/sudhi/dsa/datastructures/BTree/README.md) | A self-balancing tree optimized for databases and filesystems. |
 | ↔️ [Deque](./src/main/java/com/sudhi/dsa/datastructures/Deque/README.md) | A double-ended queue. |
@@ -57,8 +57,8 @@ Here you'll find the core data structures, each with its own detailed `README.md
 | 🛡️ [Set](./src/main/java/com/sudhi/dsa/datastructures/Set/README.md) | A collection of distinct elements. |
 | 📚 [Stack](./src/main/java/com/sudhi/dsa/datastructures/Stack/README.md) | A collection of elements with two principal operations: push, which adds an element to the collection, and pop, which removes the most recently added element. |
 | 🌲 [Tree](./src/main/java/com/sudhi/dsa/datastructures/Tree/README.md) | A hierarchical data structure. |
-| Trie [Trie](./src/main/java/com/sudhi/dsa/datastructures/Trie/README.md) | A tree-like data structure that stores a dynamic set of strings. |
-| Trie2 [Trie2](./src/main/java/com/sudhi/dsa/datastructures/Trie2/README.md) | An alternative implementation of a Trie. |
+| 🔤 [Trie](./src/main/java/com/sudhi/dsa/datastructures/Trie/README.md) | A tree-like data structure that stores a dynamic set of strings. |
+| 🔤 [Trie2](./src/main/java/com/sudhi/dsa/datastructures/Trie2/README.md) | An alternative implementation of a Trie. |
 
 ---
 
@@ -70,13 +70,13 @@ Explore a variety of algorithms, complete with explanations and implementation d
 | :--- | :--- |
 | ⭐ [A* Search](./src/main/java/com/sudhi/dsa/algorithms/graph/AStar/README.md) | A pathfinding algorithm known for its performance and accuracy. |
 | 🔔 [Bellman-Ford](./src/main/java/com/sudhi/dsa/algorithms/graph/BellmanFord/README.md) | Finds the shortest paths from a single source vertex to all of the other vertices in a weighted digraph. |
-| Dijkstra's [Dijkstra's Shortest Path](./src/main/java/com/sudhi/dsa/algorithms/graph/DijkstraShortestPath/README.md) | An algorithm for finding the shortest paths between nodes in a graph. |
-| Floyd-Warshall [Floyd-Warshall](./src/main/java/com/sudhi/dsa/algorithms/graph/FloydWarshall/README.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
+| 🗺️ [Dijkstra's Shortest Path](./src/main/java/com/sudhi/dsa/algorithms/graph/DijkstraShortestPath/README.md) | An algorithm for finding the shortest paths between nodes in a graph. |
+| 🌐 [Floyd-Warshall](./src/main/java/com/sudhi/dsa/algorithms/graph/FloydWarshall/README.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
 | 🌐 [Iterative Breadth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeBreadthFirstSearch/README.md) | A graph traversal algorithm that explores the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. |
 | 🚶 [Iterative Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
-| Kahn's [Kahn's Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/KahnsTopologicalSort/README.md) | A topological sort algorithm. |
-| Kruskal's [Kruskal's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/KruskalMST/README.md) | A minimum spanning tree algorithm. |
-| Prim's [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
+| 📜 [Kahn's Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/KahnsTopologicalSort/README.md) | A topological sort algorithm. |
+| 🌳 [Kruskal's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/KruskalMST/README.md) | A minimum spanning tree algorithm. |
+| 🌲 [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
 | 🚶 [Recursive Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/RecursiveDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
 | 📜 [Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/TopologicalSort/README.md) | A linear ordering of the vertices of a directed acyclic graph. |
 
