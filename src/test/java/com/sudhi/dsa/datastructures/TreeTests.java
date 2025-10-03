@@ -1,6 +1,6 @@
 package test.java.com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.Tree;
+import main.java.com.sudhi.dsa.datastructures.Tree.Tree;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

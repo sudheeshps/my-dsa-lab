@@ -1,6 +1,6 @@
 package test.java.com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.Trie2;
+import main.java.com.sudhi.dsa.datastructures.Trie2.Trie2;
 import org.junit.Assert;
 import org.junit.Test;
 

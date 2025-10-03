@@ -1,6 +1,6 @@
 package test.java.com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.Deque;
+import main.java.com.sudhi.dsa.datastructures.Deque.Deque;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

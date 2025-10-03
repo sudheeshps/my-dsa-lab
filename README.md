@@ -1,65 +1,112 @@
-# MyDSALab: A journey into Data Structures and Algorithms
+# 🚀 MyDSALab: A Comprehensive Java Data Structures & Algorithms Library
 
-[![Java](https://img.shields.io/badge/Language-Java-blue.svg)](https://www.java.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Welcome to **MyDSALab**, your personal laboratory for exploring the fundamental building blocks of computer science! This project provides a rich collection of common data structures and algorithms, all implemented in Java. It's designed to be a learning resource, a reference, and a playground for experimentation.
 
-A comprehensive, from-scratch implementation of common data structures and algorithms in Java. This project is designed as a learning tool and reference for students, self-learners, and developers looking to strengthen their foundational computer science knowledge.
+---
 
-## 🎯 What is this project?
+## 💡 The Power of the Right Choice: A Real-World Example
 
-This repository is a personal endeavor to build, test, and demonstrate various data structures and algorithms from the ground up. While most programming languages provide these tools out-of-the-box, understanding their inner workings is fundamental to writing efficient and scalable software.
+Choosing the right data structure or algorithm can be the difference between an application that flies and one that crawls. The impact is not just theoretical—it's a real-world game-changer.
 
-### Key Features
+Imagine you're building a feature to find a specific user profile from a database of **1 million users**.
 
-*   **📝 From-Scratch Implementation**: Data structures are built without relying on Java's standard `java.util` collections library to expose their core logic.
-*   **☕ Pure Java**: Using Java for its clarity and strong object-oriented principles, making the code easy to follow and understand.
-*   **✅ Unit Tested**: Each implementation is accompanied by a suite of JUnit tests to verify its correctness and behavior.
-*   **🎓 Educational Focus**: Serves as a practical guide for both beginners and advanced learners.
+### Scenario A: The Naive Approach (Using an Unsorted Array)
 
-## 🤔 Why are Data Structures Important?
+If you store the user data in a simple unsorted array or list, finding a user requires a **linear search**. You'd have to check each user one by one until you find the one you're looking for.
 
-Choosing the right data structure is the key to designing efficient algorithms. The way data is organized directly impacts an algorithm's performance in terms of speed and memory usage.
+-   **Best Case:** 1 comparison (the user is the first one).
+-   **Worst Case:** 1,000,000 comparisons (the user is the last one, or not in the list at all).
+-   **Average Case:** 500,000 comparisons.
 
-> Algorithms are designed to solve a particular problem, and data structures are the ways to organize data so that the algorithm solves the problem in a memory-efficient and time-bound manner.
+This might be acceptable for a handful of users, but for a million, it's a recipe for a slow, frustrating user experience.
 
-Let's consider a simple example.
+### Scenario B: The Smart Approach (Using a Hashtable)
 
-**Problem**: Given a list of names, group them by their starting letter.
+Now, let's use a `Hashtable` (or a `HashMap` in Java). By using the user's unique ID as a key, we can compute a hash and get the user's data in what is effectively a single step.
 
-*   **A Naive Approach**: You could add all the names to a list and sort it. While names with the same starting letter are now grouped, you still need to iterate through the list again to find the start and end of each group (e.g., all names starting with 'A'). This involves multiple passes over the data.
+-   **Best, Worst, and Average Case:** Approximately 1 operation (O(1)).
 
-*   **A Better Approach**: Use a `HashTable` (also known as a Dictionary or Map). You can iterate through the list of names just **once**. For each name, you use its starting letter as a `key` and add the name to a list of names stored as the `value`. This approach is far more efficient. For more complex problems, like finding all words in a dictionary that start with a given prefix (e.g., "algo"), an advanced data structure like a **Trie** offers superior performance over simple lists or hash tables. This project explores how to build and use these powerful tools.
+### The Verdict
 
-## 📚 Data Structures Covered
+| Approach | Time Complexity | Operations for 1 Million Users | Performance |
+| :--- | :--- | :--- | :--- |
+| Unsorted Array | O(n) | ~500,000 | 🐌 Slow |
+| Hashtable | O(1) | ~1 | ⚡️ Blazingly Fast |
 
-### Commonly Used Data Structures
-- [ ] Array
-- [ ] Linked List
-- [ ] Doubly Linked List
-- [ ] Stack
-- [ ] Queue
-- [ ] Deque
-- [ ] HashTable
-- [ ] Set
-- [ ] Tree
+By choosing a `Hashtable`, you've made the operation **half a million times faster** on average. This is the power of computer science in action. This library is designed to give you the tools and the understanding to make these smart, impactful decisions in your own projects.
 
-### Advanced Data Structures
-- [ ] Graph
-- [ ] Trie
-- [ ] B-Tree
-- [ ] AVL Tree
-- [ ] Red-Black Tree
+---
 
-*(You can update the checkboxes `[ ]` to `[x]` as you complete each implementation.)*
+## 📚 Data Structures
+
+Here you'll find the core data structures, each with its own detailed `README.md` explaining its implementation, usage, and performance characteristics.
+
+| Data Structure | Description |
+| :--- | :--- |
+|  배열 [Array](./src/main/java/com/sudhi/dsa/datastructures/Array/README.md) | A basic fixed-size collection of elements. |
+| 🌳 [AVLTree](./src/main/java/com/sudhi/dsa/datastructures/AVLTree/README.md) | A self-balancing binary search tree. |
+| 🅱️ [BTree](./src/main/java/com/sudhi/dsa/datastructures/BTree/README.md) | A self-balancing tree optimized for databases and filesystems. |
+| ↔️ [Deque](./src/main/java/com/sudhi/dsa/datastructures/Deque/README.md) | A double-ended queue. |
+| 🔗 [DoublyLinkedList](./src/main/java/com/sudhi/dsa/datastructures/DoublyLinkedList/README.md) | A linked list where each node has pointers to the next and previous nodes. |
+| 🕸️ [Graph](./src/main/java/com/sudhi/dsa/datastructures/Graph/README.md) | A collection of vertices and edges. |
+| #️⃣ [Hashtable](./src/main/java/com/sudhi/dsa/datastructures/Hashtable/README.md) | A data structure that implements an associative array abstract data type. |
+| ⛓️ [LinkedList](./src/main/java/com/sudhi/dsa/datastructures/LinkedList/README.md) | A linear collection of data elements whose order is not given by their physical placement in memory. |
+| 🔝 [PriorityQueue](./src/main/java/com/sudhi/dsa/datastructures/PriorityQueue/README.md) | A type of queue in which each element has a "priority" associated with it. |
+| ➡️ [Queue](./src/main/java/com/sudhi/dsa/datastructures/Queue/README.md) | A collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end. |
+| 🌳 [RedBlackTree](./src/main/java/com/sudhi/dsa/datastructures/RedBlackTree/README.md) | A self-balancing binary search tree. |
+| 🛡️ [Set](./src/main/java/com/sudhi/dsa/datastructures/Set/README.md) | A collection of distinct elements. |
+| 📚 [Stack](./src/main/java/com/sudhi/dsa/datastructures/Stack/README.md) | A collection of elements with two principal operations: push, which adds an element to the collection, and pop, which removes the most recently added element. |
+| 🌲 [Tree](./src/main/java/com/sudhi/dsa/datastructures/Tree/README.md) | A hierarchical data structure. |
+| Trie [Trie](./src/main/java/com/sudhi/dsa/datastructures/Trie/README.md) | A tree-like data structure that stores a dynamic set of strings. |
+| Trie2 [Trie2](./src/main/java/com/sudhi/dsa/datastructures/Trie2/README.md) | An alternative implementation of a Trie. |
+
+---
+
+## ⚙️ Algorithms
+
+Explore a variety of algorithms, complete with explanations and implementation details.
+
+| Algorithm | Description |
+| :--- | :--- |
+| ⭐ [A* Search](./src/main/java/com/sudhi/dsa/algorithms/graph/AStar/README.md) | A pathfinding algorithm known for its performance and accuracy. |
+| 🔔 [Bellman-Ford](./src/main/java/com/sudhi/dsa/algorithms/graph/BellmanFord/README.md) | Finds the shortest paths from a single source vertex to all of the other vertices in a weighted digraph. |
+| Dijkstra's [Dijkstra's Shortest Path](./src/main/java/com/sudhi/dsa/algorithms/graph/DijkstraShortestPath/README.md) | An algorithm for finding the shortest paths between nodes in a graph. |
+| Floyd-Warshall [Floyd-Warshall](./src/main/java/com/sudhi/dsa/algorithms/graph/FloydWarshall/README.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
+| 🌐 [Iterative Breadth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeBreadthFirstSearch/README.md) | A graph traversal algorithm that explores the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. |
+| 🚶 [Iterative Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
+| Kahn's [Kahn's Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/KahnsTopologicalSort/README.md) | A topological sort algorithm. |
+| Kruskal's [Kruskal's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/KruskalMST/README.md) | A minimum spanning tree algorithm. |
+| Prim's [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
+| 🚶 [Recursive Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/RecursiveDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
+| 📜 [Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/TopologicalSort/README.md) | A linear ordering of the vertices of a directed acyclic graph. |
+
+---
 
 ## 🚀 Getting Started
 
-You can clone and run this project locally to explore the implementations and run the tests.
+To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
-*   Java JDK (Version 11 or higher recommended)
-*   Git
+1.  **Clone the repo**
+    ```sh
+    git clone https://github.com/your_username/MyDSALab.git
+    ```
+2.  **Open the project** in your favorite Java IDE (like IntelliJ IDEA, Eclipse, or VS Code).
+3.  **Explore the code!** Each data structure and algorithm is in its own file, with accompanying tests.
 
-### Installation & Setup
-1.  **Clone the repository:**
-    
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.

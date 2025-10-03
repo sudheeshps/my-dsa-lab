@@ -1,6 +1,6 @@
 package test.java.com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.Hashtable;
+import main.java.com.sudhi.dsa.datastructures.Hashtable.Hashtable;
 import org.junit.Assert;
 import org.junit.Test;
 
