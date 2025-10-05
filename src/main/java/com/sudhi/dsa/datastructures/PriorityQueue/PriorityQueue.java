@@ -5,7 +5,7 @@
  * Original author William Fiset, introduced comparator for support min or max
  * heap
  */
-package main.java.com.sudhi.dsa.datastructures.PriorityQueue;
+package com.sudhi.dsa.datastructures.PriorityQueue;
 
 import java.util.ArrayList;
 import java.util.Collection;

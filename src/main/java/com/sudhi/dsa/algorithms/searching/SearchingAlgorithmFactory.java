@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.algorithms.searching;
+package com.sudhi.dsa.algorithms.searching;
 
 public class SearchingAlgorithmFactory <T extends Comparable<T>> {
     public enum SearchingAlgorithmType {

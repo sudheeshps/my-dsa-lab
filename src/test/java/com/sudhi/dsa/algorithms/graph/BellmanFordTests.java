@@ -1,7 +1,7 @@
-package test.java.com.sudhi.dsa.algorithms.graph;
+package com.sudhi.dsa.algorithms.graph;
 
-import main.java.com.sudhi.dsa.algorithms.graph.BellmanFord.BellmanFord;
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.algorithms.graph.BellmanFord.BellmanFord;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;

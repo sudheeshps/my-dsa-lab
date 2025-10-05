@@ -1,6 +1,6 @@
-package test.java.com.sudhi.dsa.datastructures;
+package com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.AVLTree.AVLTree;
+import com.sudhi.dsa.datastructures.AVLTree.AVLTree;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

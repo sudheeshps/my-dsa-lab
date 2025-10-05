@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.Trie2;
+package com.sudhi.dsa.datastructures.Trie2;
 
 import java.util.HashMap;
 import java.util.Map;

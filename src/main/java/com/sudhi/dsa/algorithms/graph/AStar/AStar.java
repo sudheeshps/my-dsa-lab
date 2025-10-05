@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.algorithms.graph.AStar;
+package com.sudhi.dsa.algorithms.graph.AStar;
 
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 import java.awt.Point;
 import java.util.List;

@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.algorithms.graph.RecursiveDepthFirstSearch;
+package com.sudhi.dsa.algorithms.graph.RecursiveDepthFirstSearch;
 
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 import java.util.ArrayList;
 import java.util.HashSet;

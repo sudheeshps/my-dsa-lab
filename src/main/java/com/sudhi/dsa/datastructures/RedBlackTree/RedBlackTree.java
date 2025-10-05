@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.RedBlackTree;
+package com.sudhi.dsa.datastructures.RedBlackTree;
 
 public class RedBlackTree<Key extends Comparable<Key>, Value> {
 

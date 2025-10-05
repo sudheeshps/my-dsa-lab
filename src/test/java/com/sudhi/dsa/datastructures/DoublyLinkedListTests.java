@@ -1,6 +1,6 @@
-package test.java.com.sudhi.dsa.datastructures;
+package com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.DoublyLinkedList.DoublyLinkedList;
+import com.sudhi.dsa.datastructures.DoublyLinkedList.DoublyLinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

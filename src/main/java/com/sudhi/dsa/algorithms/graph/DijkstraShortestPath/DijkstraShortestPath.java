@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.algorithms.graph.DijkstraShortestPath;
+package com.sudhi.dsa.algorithms.graph.DijkstraShortestPath;
 
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 import java.util.*;
 

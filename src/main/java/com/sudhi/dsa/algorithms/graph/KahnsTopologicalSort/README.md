@@ -7,68 +7,42 @@ Kahn's algorithm is another algorithm for topological sorting of a Directed Acyc
 To use Kahn's algorithm, you need a directed `Graph` object. The algorithm will return a list of vertices in topologically sorted order.
 
 ```java
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
-
+import com.sudhi.dsa.datastructures.Graph.Graph;
 import java.util.List;
 
 // Create a directed graph
 Graph<String> graph = new Graph<>(true);
 
-        // Create vertex objects
-        Graph.Vertex<String> vertexA = new Graph.Vertex<>("A");
-        Graph.Vertex<String> vertexB = new Graph.Vertex<>("B");
-        Graph.Vertex<String> vertexC = new Graph.Vertex<>("C");
-        Graph.Vertex<String> vertexD = new Graph.Vertex<>("D");
-        Graph.Vertex<String> vertexE = new Graph.Vertex<>("E");
+// Create vertex objects
+Graph.Vertex<String> vertexA = new Graph.Vertex<>("A");
+Graph.Vertex<String> vertexB = new Graph.Vertex<>("B");
+Graph.Vertex<String> vertexC = new Graph.Vertex<>("C");
+Graph.Vertex<String> vertexD = new Graph.Vertex<>("D");
+Graph.Vertex<String> vertexE = new Graph.Vertex<>("E");
 
 // Add vertices to the graph
-graph.
-
-        addVertex(vertexA);
-graph.
-
-        addVertex(vertexB);
-graph.
-
-        addVertex(vertexC);
-graph.
-
-        addVertex(vertexD);
-graph.
-
-        addVertex(vertexE);
+graph.addVertex(vertexA);
+graph.addVertex(vertexB);
+graph.addVertex(vertexC);
+graph.addVertex(vertexD);
+graph.addVertex(vertexE);
 
 // Add edges
-graph.
+graph.addEdge(vertexA, vertexB, 1);
+graph.addEdge(vertexA, vertexC, 1);
+graph.addEdge(vertexB, vertexD, 1);
+graph.addEdge(vertexC, vertexD, 1);
+graph.addEdge(vertexD, vertexE, 1);
 
-        addEdge(vertexA, vertexB, 1);
-graph.
-
-        addEdge(vertexA, vertexC, 1);
-graph.
-
-        addEdge(vertexB, vertexD, 1);
-graph.
-
-        addEdge(vertexC, vertexD, 1);
-graph.
-
-        addEdge(vertexD, vertexE, 1);
-
-        // Perform topological sort
-        KahnsTopologicalSort<String> kahnsSort = new KahnsTopologicalSort<>(graph);
-        List<Graph.Vertex<String>> sortedList = kahnsSort.sort();
+// Perform topological sort
+KahnsTopologicalSort<String> kahnsSort = new KahnsTopologicalSort<>(graph);
+List<Graph.Vertex<String>> sortedList = kahnsSort.sort();
 
 // Print the sorted list
-System.out.
-
-        println("Topologically sorted order (Kahn's algorithm):");
-for(
-        Graph.Vertex<String> vertex :sortedList){
-        System.out.
-
-        print(vertex.getVal() +" ");
-        }
+System.out.println("Topologically sorted order (Kahn's algorithm):");
+for (Graph.Vertex<String> vertex : sortedList) {
+    System.out.print(vertex.getVal() + " ");
+}
 ```
 
 ## Methods

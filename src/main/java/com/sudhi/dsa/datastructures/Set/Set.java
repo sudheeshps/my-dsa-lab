@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.datastructures.Set;
+package com.sudhi.dsa.datastructures.Set;
 
-import main.java.com.sudhi.dsa.datastructures.Hashtable.Hashtable;
+import com.sudhi.dsa.datastructures.Hashtable.Hashtable;
 
 public class Set<T extends Comparable<T>> {
     private final Hashtable<T, Object> hashtable;

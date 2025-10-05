@@ -15,54 +15,33 @@ import java.util.List;
 // Create a graph of Point objects
 Graph<Point> graph = new Graph<>(false); // Undirected graph
 
-        // Create vertex objects
-        Graph.Vertex<Point> startNode = new Graph.Vertex<>(new Point(0, 0));
-        Graph.Vertex<Point> endNode = new Graph.Vertex<>(new Point(3, 3));
-        Graph.Vertex<Point> node1 = new Graph.Vertex<>(new Point(1, 1));
-        Graph.Vertex<Point> node2 = new Graph.Vertex<>(new Point(2, 2));
+// Create vertex objects
+Graph.Vertex<Point> startNode = new Graph.Vertex<>(new Point(0, 0));
+Graph.Vertex<Point> endNode = new Graph.Vertex<>(new Point(3, 3));
+Graph.Vertex<Point> node1 = new Graph.Vertex<>(new Point(1, 1));
+Graph.Vertex<Point> node2 = new Graph.Vertex<>(new Point(2, 2));
 
 // Add vertices to the graph
-graph.
-
-        addVertex(startNode);
-graph.
-
-        addVertex(endNode);
-graph.
-
-        addVertex(node1);
-graph.
-
-        addVertex(node2);
+graph.addVertex(startNode);
+graph.addVertex(endNode);
+graph.addVertex(node1);
+graph.addVertex(node2);
 
 // Add edges with weights
-graph.
+graph.addEdge(startNode, node1, 1.0);
+graph.addEdge(node1, node2, 1.0);
+graph.addEdge(node2, endNode, 1.0);
 
-        addEdge(startNode, node1, 1.0);
-graph.
+// Find the shortest path
+List<Graph.Vertex<Point>> path = AStar.findPath(graph, startNode, endNode);
 
-        addEdge(node1, node2, 1.0);
-graph.
-
-        addEdge(node2, endNode, 1.0);
-
-        // Find the shortest path
-        List<Graph.Vertex<Point>> path = AStar.findPath(graph, startNode, endNode);
-
-if(path !=null){
-        System.out.
-
-        println("Shortest path found:");
-    for(
-        Graph.Vertex<Point> vertex :path){
-        System.out.
-
-        println(vertex.getVal());
-        }
-        }else{
-        System.out.
-
-        println("No path found.");
+if (path != null) {
+    System.out.println("Shortest path found:");
+    for (Graph.Vertex<Point> vertex : path) {
+        System.out.println(vertex.getVal());
+    }
+} else {
+    System.out.println("No path found.");
 }
 ```
 

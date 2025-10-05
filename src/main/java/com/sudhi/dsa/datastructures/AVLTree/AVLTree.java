@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.AVLTree;
+package com.sudhi.dsa.datastructures.AVLTree;
 
 public class AVLTree<T extends Comparable<T>> {
 

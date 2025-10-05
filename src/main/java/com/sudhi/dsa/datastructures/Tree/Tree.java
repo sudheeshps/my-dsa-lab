@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.Tree;
+package com.sudhi.dsa.datastructures.Tree;
 
 import java.util.ArrayList;
 import java.util.List;

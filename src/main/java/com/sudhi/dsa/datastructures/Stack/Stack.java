@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.datastructures.Stack;
+package com.sudhi.dsa.datastructures.Stack;
 
-import main.java.com.sudhi.dsa.datastructures.Array.Array;
+import com.sudhi.dsa.datastructures.Array.Array;
 
 public class Stack<T extends Comparable<T>> {
 

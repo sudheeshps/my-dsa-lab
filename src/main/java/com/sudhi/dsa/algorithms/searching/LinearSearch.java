@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.algorithms.searching;
+package com.sudhi.dsa.algorithms.searching;
 
 public class LinearSearch <T extends Comparable<T>> extends SearchAlgorithm<T>{
     public LinearSearch(T[] elements) {

@@ -7,58 +7,38 @@ Depth-First Search (DFS) is an algorithm for traversing or searching tree or gra
 To use the iterative DFS algorithm, you need a `Graph` object and a starting vertex. The algorithm will return a list of vertices in the order they were visited.
 
 ```java
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
-
+import com.sudhi.dsa.datastructures.Graph.Graph;
 import java.util.List;
 
 // Create a graph
 Graph<String> graph = new Graph<>(true); // Directed graph
 
-        // Create vertex objects
-        Graph.Vertex<String> vertexA = new Graph.Vertex<>("A");
-        Graph.Vertex<String> vertexB = new Graph.Vertex<>("B");
-        Graph.Vertex<String> vertexC = new Graph.Vertex<>("C");
-        Graph.Vertex<String> vertexD = new Graph.Vertex<>("D");
+// Create vertex objects
+Graph.Vertex<String> vertexA = new Graph.Vertex<>("A");
+Graph.Vertex<String> vertexB = new Graph.Vertex<>("B");
+Graph.Vertex<String> vertexC = new Graph.Vertex<>("C");
+Graph.Vertex<String> vertexD = new Graph.Vertex<>("D");
 
 // Add vertices to the graph
-graph.
-
-        addVertex(vertexA);
-graph.
-
-        addVertex(vertexB);
-graph.
-
-        addVertex(vertexC);
-graph.
-
-        addVertex(vertexD);
+graph.addVertex(vertexA);
+graph.addVertex(vertexB);
+graph.addVertex(vertexC);
+graph.addVertex(vertexD);
 
 // Add edges
-graph.
+graph.addEdge(vertexA, vertexB, 1);
+graph.addEdge(vertexA, vertexC, 1);
+graph.addEdge(vertexB, vertexD, 1);
 
-        addEdge(vertexA, vertexB, 1);
-graph.
-
-        addEdge(vertexA, vertexC, 1);
-graph.
-
-        addEdge(vertexB, vertexD, 1);
-
-        // Perform iterative DFS
-        IterativeDepthFirstSearch<String> dfs = new IterativeDepthFirstSearch<>(graph);
-        List<Graph.Vertex<String>> traversal = dfs.dfs(vertexA);
+// Perform iterative DFS
+IterativeDepthFirstSearch<String> dfs = new IterativeDepthFirstSearch<>(graph);
+List<Graph.Vertex<String>> traversal = dfs.dfs(vertexA);
 
 // Print the traversal
-System.out.
-
-        println("Iterative DFS traversal:");
-for(
-        Graph.Vertex<String> vertex :traversal){
-        System.out.
-
-        print(vertex.getVal() +" ");
-        }
+System.out.println("Iterative DFS traversal:");
+for (Graph.Vertex<String> vertex : traversal) {
+    System.out.print(vertex.getVal() + " ");
+}
 ```
 
 ## Methods

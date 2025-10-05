@@ -1,6 +1,6 @@
-package test.java.com.sudhi.dsa.algorithms;
+package com.sudhi.dsa.algorithms;
 
-import main.java.com.sudhi.dsa.algorithms.searching.SearchingAlgorithmFactory;
+import com.sudhi.dsa.algorithms.searching.SearchingAlgorithmFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;

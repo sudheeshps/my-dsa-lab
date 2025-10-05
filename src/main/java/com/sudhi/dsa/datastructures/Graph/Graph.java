@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.Graph;
+package com.sudhi.dsa.datastructures.Graph;
 
 import java.util.*;
 import java.util.Set;

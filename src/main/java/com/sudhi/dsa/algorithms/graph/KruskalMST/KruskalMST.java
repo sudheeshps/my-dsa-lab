@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.algorithms.graph.KruskalMST;
+package com.sudhi.dsa.algorithms.graph.KruskalMST;
 
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 import java.util.*;
 

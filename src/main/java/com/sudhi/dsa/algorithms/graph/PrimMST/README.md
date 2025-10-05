@@ -7,52 +7,33 @@ Prim's algorithm is a greedy algorithm that finds a minimum spanning tree (MST) 
 To use Prim's algorithm, you need a `Graph` object. The algorithm will return a new `Graph` object representing the MST.
 
 ```java
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
-import main.java.com.sudhi.dsa.algorithms.graph.PrimMST.PrimMST;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 // Create a graph
 Graph<Integer> graph = new Graph<>(false); // Undirected graph
 
-        // Create vertex objects
-        Graph.Vertex<Integer> vertex1 = new Graph.Vertex<>(1);
-        Graph.Vertex<Integer> vertex2 = new Graph.Vertex<>(2);
-        Graph.Vertex<Integer> vertex3 = new Graph.Vertex<>(3);
-        Graph.Vertex<Integer> vertex4 = new Graph.Vertex<>(4);
+// Create vertex objects
+Graph.Vertex<Integer> vertex1 = new Graph.Vertex<>(1);
+Graph.Vertex<Integer> vertex2 = new Graph.Vertex<>(2);
+Graph.Vertex<Integer> vertex3 = new Graph.Vertex<>(3);
+Graph.Vertex<Integer> vertex4 = new Graph.Vertex<>(4);
 
 // Add vertices to the graph
-graph.
-
-        addVertex(vertex1);
-graph.
-
-        addVertex(vertex2);
-graph.
-
-        addVertex(vertex3);
-graph.
-
-        addVertex(vertex4);
+graph.addVertex(vertex1);
+graph.addVertex(vertex2);
+graph.addVertex(vertex3);
+graph.addVertex(vertex4);
 
 // Add edges with weights
-graph.
+graph.addEdge(vertex1, vertex2, 10);
+graph.addEdge(vertex1, vertex3, 6);
+graph.addEdge(vertex1, vertex4, 5);
+graph.addEdge(vertex2, vertex4, 15);
+graph.addEdge(vertex3, vertex4, 4);
 
-        addEdge(vertex1, vertex2, 10);
-graph.
-
-        addEdge(vertex1, vertex3, 6);
-graph.
-
-        addEdge(vertex1, vertex4, 5);
-graph.
-
-        addEdge(vertex2, vertex4, 15);
-graph.
-
-        addEdge(vertex3, vertex4, 4);
-
-        // Find the MST
-        PrimMST<Integer> prims = new PrimMST<>();
-        Graph<Integer> mst = prims.findMST(graph);
+// Find the MST
+PrimMST<Integer> prims = new PrimMST<>();
+Graph<Integer> mst = prims.findMST(graph);
 
 // You can now work with the 'mst' graph object
 ```

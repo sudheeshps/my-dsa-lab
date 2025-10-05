@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.LinkedList;
+package com.sudhi.dsa.datastructures.LinkedList;
 
 public class LinkedList<T> {
 

@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.Hashtable;
+package com.sudhi.dsa.datastructures.Hashtable;
 
 import java.util.ArrayList;
 import java.util.List;

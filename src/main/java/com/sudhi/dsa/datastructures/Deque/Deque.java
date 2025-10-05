@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.datastructures.Deque;
+package com.sudhi.dsa.datastructures.Deque;
 
-import main.java.com.sudhi.dsa.datastructures.DoublyLinkedList.DoublyLinkedList;
+import com.sudhi.dsa.datastructures.DoublyLinkedList.DoublyLinkedList;
 
 public class Deque<T> {
     private final DoublyLinkedList<T> list;

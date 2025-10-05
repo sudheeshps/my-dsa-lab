@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.algorithms.sorting;
+package com.sudhi.dsa.algorithms.sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,6 +1,6 @@
-package test.java.com.sudhi.dsa.datastructures;
+package com.sudhi.dsa.datastructures;
 
-import main.java.com.sudhi.dsa.datastructures.Queue.Queue;
+import com.sudhi.dsa.datastructures.Queue.Queue;
 import org.junit.Assert;
 import org.junit.Test;
 

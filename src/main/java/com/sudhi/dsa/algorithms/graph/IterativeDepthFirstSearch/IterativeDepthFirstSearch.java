@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.algorithms.graph.IterativeDepthFirstSearch;
+package com.sudhi.dsa.algorithms.graph.IterativeDepthFirstSearch;
 
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 import java.util.*;
 

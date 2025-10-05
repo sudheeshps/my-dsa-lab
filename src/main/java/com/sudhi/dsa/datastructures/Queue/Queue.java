@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.datastructures.Queue;
+package com.sudhi.dsa.datastructures.Queue;
 
-import main.java.com.sudhi.dsa.datastructures.LinkedList.LinkedList;
+import com.sudhi.dsa.datastructures.LinkedList.LinkedList;
 
 public class Queue<T> {
 

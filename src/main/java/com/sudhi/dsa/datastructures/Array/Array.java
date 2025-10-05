@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.Array;
+package com.sudhi.dsa.datastructures.Array;
 
 public class Array<T extends Comparable<T>> {
     private int capacity = 10; // Default capacity

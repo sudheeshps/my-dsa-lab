@@ -1,7 +1,7 @@
-package test.java.com.sudhi.dsa.algorithms;
+package com.sudhi.dsa.algorithms;
 
-import main.java.com.sudhi.dsa.algorithms.sorting.SortingAlgorithm;
-import main.java.com.sudhi.dsa.algorithms.sorting.SortingAlgorithmFactory;
+import com.sudhi.dsa.algorithms.sorting.SortingAlgorithm;
+import com.sudhi.dsa.algorithms.sorting.SortingAlgorithmFactory;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 

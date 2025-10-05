@@ -1,6 +1,6 @@
-package main.java.com.sudhi.dsa.algorithms.graph.TopologicalSort;
+package com.sudhi.dsa.algorithms.graph.TopologicalSort;
 
-import main.java.com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.datastructures.Graph.Graph;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.datastructures.BTree;
+package com.sudhi.dsa.datastructures.BTree;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package main.java.com.sudhi.dsa.algorithms.searching;
+package com.sudhi.dsa.algorithms.searching;
 
 public class IterativeBinarySearch <T extends Comparable<T>> extends SearchAlgorithm<T> {
     public IterativeBinarySearch(T[] elements) {
