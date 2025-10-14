@@ -66,6 +66,8 @@ Here you'll find the core data structures, each with its own detailed `README.md
 
 Explore a variety of algorithms, complete with explanations and implementation details.
 
+### Graph Algorithms
+
 | Algorithm | Description |
 | :--- | :--- |
 | ⭐ [A* Search](./src/main/java/com/sudhi/dsa/algorithms/graph/AStar/README.md) | A pathfinding algorithm known for its performance and accuracy. |
@@ -79,6 +81,27 @@ Explore a variety of algorithms, complete with explanations and implementation d
 | 🌲 [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
 | 🚶 [Recursive Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/RecursiveDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
 | 📜 [Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/TopologicalSort/README.md) | A linear ordering of the vertices of a directed acyclic graph. |
+
+### Searching Algorithms
+
+| Algorithm | Description |
+| :--- | :--- |
+| 🔍 [Linear Search](./src/main/java/com/sudhi/dsa/algorithms/searching/LinearSearch/README.md) | A simple search that sequentially checks each element of a list. |
+| 🎯 [Iterative Binary Search](./src/main/java/com/sudhi/dsa/algorithms/searching/IterativeBinarySearch/README.md) | An efficient search algorithm that finds the position of a target value within a sorted array. |
+| 🎯 [Recursive Binary Search](./src/main/java/com/sudhi/dsa/algorithms/searching/RecursiveBinarySearch/README.md) | A recursive implementation of the binary search algorithm. |
+
+### Sorting Algorithms
+
+| Algorithm | Description |
+| :--- | :--- |
+| 🧼 [Bubble Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/BubbleSort/README.md) | A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. |
+| 🔢 [Count Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/CountSort/README.md) | An integer sorting algorithm that operates by counting the number of objects that have each distinct key value. |
+| 堆 [Heap Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/HeapSort/README.md) | A comparison-based sorting algorithm that uses a binary heap data structure. |
+| 👉 [Insertion Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/InsertionSort/README.md) | A simple sorting algorithm that builds the final sorted array one item at a time. |
+| 🔀 [Merge Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/MergeSort/README.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
+| ⚡ [Quick Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/QuickSort/README.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
+| ✅ [Selection Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/SelectionSort/README.md) | A simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right and a sublist of the remaining unsorted items. |
+| 🐚 [Shell Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/ShellSort/README.md) | A generalization of insertion sort that allows the exchange of items that are far apart. |
 
 ---
 

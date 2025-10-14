@@ -2,29 +2,65 @@ package com.sudhi.dsa.datastructures.Hashtable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-class Entry<K extends Comparable<K>, V> {
-    private final K key;
-    private final V value;
-    public Entry(K key, V value) {
-        this.key = key;
-        this.value = value;
-    }
-    public K getKey() { return key; }
-    public V getValue() { return value; }
-}
+public class Hashtable<K, V> {
 
-public class Hashtable<K extends Comparable<K>, V> {
-    private final int capacity;
-    private int size = 0;
-    private final List<List<Entry<K, V>>> table;
+    private static class Entry<K, V> {
+        final K key;
+        V value;
+        Entry<K, V> next;
 
-    public Hashtable(int capacity) {
-        this.capacity = capacity;
-        this.table = new ArrayList<>(capacity);
-        for (int i = 0; i < capacity; i++) {
-            this.table.add(new ArrayList<>());
+        Entry(K key, V value, Entry<K, V> next) {
+            this.key = key;
+            this.value = value;
+            this.next = next;
         }
+
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return key + "=" + value;
+        }
+    }
+
+    private static final int DEFAULT_CAPACITY = 16;
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
+
+    private Entry<K, V>[] table;
+    private int size = 0;
+    private final float loadFactor;
+    private int threshold;
+
+    public Hashtable() {
+        this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
+    }
+
+    public Hashtable(int initialCapacity) {
+        this(initialCapacity, DEFAULT_LOAD_FACTOR);
+    }
+
+    public Hashtable(int initialCapacity, float loadFactor) {
+        if (initialCapacity < 0) {
+            throw new IllegalArgumentException("Illegal initial capacity: " + initialCapacity);
+        }
+        if (loadFactor <= 0 || Float.isNaN(loadFactor)) {
+            throw new IllegalArgumentException("Illegal load factor: " + loadFactor);
+        }
+        this.loadFactor = loadFactor;
+        this.table = new Entry[initialCapacity];
+        this.threshold = (int) (initialCapacity * loadFactor);
+    }
+
+    private int hash(K key) {
+        return (key == null) ? 0 : Math.abs(key.hashCode() % table.length);
     }
 
     public int size() {
@@ -35,76 +71,91 @@ public class Hashtable<K extends Comparable<K>, V> {
         return size == 0;
     }
 
-    public void put(K key, V value) throws Exception {
-        int index = getIndex(key);
-        List<Entry<K, V>> list = getValueList(index);
-
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getKey().equals(key)) {
-                list.set(i, new Entry<>(key, value));
-                return;
+    public V get(K key) {
+        int index = hash(key);
+        for (Entry<K, V> entry = table[index]; entry != null; entry = entry.next) {
+            if (Objects.equals(key, entry.key)) {
+                return entry.value;
             }
         }
-
-        if (size >= capacity) {
-            throw new Exception("Not enough capacity");
-        }
-
-        list.add(new Entry<>(key, value));
-        size++;
+        return null;
     }
 
-    public V get(K key) {
-        int index = getIndex(key);
-        List<Entry<K, V>> list = getValueList(index);
-        for (var entry : list) {
-            if (entry.getKey().equals(key)) {
-                return entry.getValue();
+    public V put(K key, V value) {
+        if (size >= threshold) {
+            resize(2 * table.length);
+        }
+
+        int index = hash(key);
+        for (Entry<K, V> entry = table[index]; entry != null; entry = entry.next) {
+            if (Objects.equals(key, entry.key)) {
+                V oldValue = entry.value;
+                entry.value = value;
+                return oldValue;
             }
         }
+
+        Entry<K, V> newEntry = new Entry<>(key, value, table[index]);
+        table[index] = newEntry;
+        size++;
         return null;
     }
 
     public V remove(K key) {
-        int index = getIndex(key);
-        List<Entry<K, V>> list = getValueList(index);
-        for (int i = 0; i < list.size(); i++) {
-            Entry<K, V> entry = list.get(i);
-            if (entry.getKey().equals(key)) {
-                list.remove(i);
+        int index = hash(key);
+        Entry<K, V> prev = null;
+        Entry<K, V> entry = table[index];
+
+        while (entry != null) {
+            if (Objects.equals(key, entry.key)) {
+                if (prev == null) {
+                    table[index] = entry.next;
+                } else {
+                    prev.next = entry.next;
+                }
                 size--;
-                return entry.getValue();
+                return entry.value;
             }
+            prev = entry;
+            entry = entry.next;
         }
         return null;
     }
 
+    private void resize(int newCapacity) {
+        Entry<K, V>[] newTable = new Entry[newCapacity];
+        for (Entry<K, V> oldEntry : table) {
+            while (oldEntry != null) {
+                Entry<K, V> next = oldEntry.next;
+                int index = Math.abs(oldEntry.key.hashCode() % newCapacity);
+                oldEntry.next = newTable[index];
+                newTable[index] = oldEntry;
+                oldEntry = next;
+            }
+        }
+        table = newTable;
+        threshold = (int) (newCapacity * loadFactor);
+    }
+
     public List<K> getKeySet() {
-        List<K> keys = new ArrayList<>();
-        for (var entryList : table) {
-            for (var entry : entryList) {
-                keys.add(entry.getKey());
+        List<K> keys = new ArrayList<>(size);
+        for (Entry<K, V> entry : table) {
+            while (entry != null) {
+                keys.add(entry.key);
+                entry = entry.next;
             }
         }
         return keys;
     }
 
     public List<V> getValues() {
-        List<V> values = new ArrayList<>();
-        for (var entryList : table) {
-            for (var entry : entryList) {
-                values.add(entry.getValue());
+        List<V> values = new ArrayList<>(size);
+        for (Entry<K, V> entry : table) {
+            while (entry != null) {
+                values.add(entry.value);
+                entry = entry.next;
             }
         }
         return values;
-    }
-
-    private int getIndex(K key) {
-        int hash = key.hashCode();
-        return Math.abs(hash % capacity);
-    }
-
-    private List<Entry<K, V>> getValueList(int index) {
-        return table.get(index);
     }
 }

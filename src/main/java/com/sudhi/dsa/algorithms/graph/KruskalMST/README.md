@@ -1,54 +1,61 @@
 # Kruskal's Algorithm for Minimum Spanning Tree (MST)
 
-Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree (MST) for a weighted, undirected graph. It works by sorting all the edges in the graph by weight in ascending order and adding them to the MST as long as they don't form a cycle.
+## Introduction
 
-## Usage
+Kruskal's algorithm is a greedy algorithm that finds a Minimum Spanning Tree (MST) for a connected, weighted, and undirected graph. It finds a subset of the edges that forms a tree that includes every vertex, where the total weight of all the edges in the tree is minimized.
 
-To use Kruskal's algorithm, you need a `Graph` object. The algorithm will return a new `Graph` object representing the MST.
+---
 
-```java
-import com.sudhi.dsa.datastructures.Graph.Graph;
+## History
 
-// Create a graph
-Graph<Integer> graph = new Graph<>(false); // Undirected graph
+The algorithm was first published in 1956 by **Joseph Kruskal**. It was one of several early and influential greedy algorithms developed for graph problems.
 
-// Create vertex objects
-Graph.Vertex<Integer> vertex1 = new Graph.Vertex<>(1);
-Graph.Vertex<Integer> vertex2 = new Graph.Vertex<>(2);
-Graph.Vertex<Integer> vertex3 = new Graph.Vertex<>(3);
-Graph.Vertex<Integer> vertex4 = new Graph.Vertex<>(4);
+---
 
-// Add vertices to the graph
-graph.addVertex(vertex1);
-graph.addVertex(vertex2);
-graph.addVertex(vertex3);
-graph.addVertex(vertex4);
+## Behaviour of the Algorithm
 
-// Add edges with weights
-graph.addEdge(vertex1, vertex2, 10);
-graph.addEdge(vertex1, vertex3, 6);
-graph.addEdge(vertex1, vertex4, 5);
-graph.addEdge(vertex2, vertex4, 15);
-graph.addEdge(vertex3, vertex4, 4);
+The algorithm treats the graph as a forest and each vertex in it as an individual tree. It then sorts all the edges in non-decreasing order of their weights. It picks the smallest edge and checks if adding it to the spanning tree being formed will create a cycle. If no cycle is formed, the edge is included; otherwise, it is discarded.
 
-// Find the MST
-KruskalMST<Integer> kruskal = new KruskalMST<>();
-Graph<Integer> mst = kruskal.findMST(graph);
+This process is repeated until there are (V-1) edges in the spanning tree, where V is the number of vertices.
 
-// You can now work with the 'mst' graph object
-```
+---
 
-## Methods
+## Algorithm Complexity
 
-### `findMST(Graph<T> graph)`
+-   **Time Complexity**: **O(E log E)** or **O(E log V)**. The dominant step is sorting the edges. The Union-Find operations have a nearly constant time complexity on average.
+-   **Space Complexity**: **O(V + E)** to store the graph, the list of edges, and the Disjoint Set Union data structure.
 
-Finds the Minimum Spanning Tree (MST) of a given `graph` using Kruskal's algorithm.
+---
 
--   **Parameters:**
-    -   `graph`: The graph for which to find the MST.
--   **Returns:**
-    -   A new `Graph<T>` object representing the Minimum Spanning Tree.
+## Comparison with Other Algorithms
 
-## Disjoint Set Union (DSU)
+-   **vs. Prim's Algorithm**: Both are greedy algorithms for finding MSTs. Kruskal's algorithm works by sorting edges and adding them as long as they don't form a cycle. Prim's algorithm grows a single tree from a starting vertex. Kruskal's is often faster for **sparse graphs** (where `E` is much smaller than `V^2`), while Prim's (with a Fibonacci heap) can be faster for **dense graphs**.
 
-This implementation of Kruskal's algorithm uses a Disjoint Set Union (DSU) data structure to efficiently detect cycles in the graph. The DSU is implemented as a private inner class.
+---
+
+## How the Algorithm is Implemented
+
+This implementation relies on a **Disjoint Set Union (DSU)** data structure, often called Union-Find, to efficiently detect cycles.
+
+1.  All edges from the input graph are placed into a list and sorted by weight in ascending order.
+2.  A `DisjointSet` helper class is used. Initially, each vertex is in its own set (`makeSet`).
+3.  The algorithm iterates through the sorted edges. For each edge, it checks if the two vertices of the edge belong to the same set using the `find` operation.
+4.  If they are in different sets, it means adding the edge will not form a cycle. The edge is added to the MST, and the two sets are merged using the `union` operation.
+5.  If they are already in the same set, adding the edge would form a cycle, so it is ignored.
+
+## Known Applications
+
+- **Network Design**: Laying out electrical grids, computer networks, or pipelines to minimize total cable/pipe length.
+- **Approximation Algorithms**: Used as a component in more complex algorithms, such as for the Traveling Salesman Problem.
+- **Clustering**: Can be used in clustering algorithms to group similar data points.
+
+## API Documentation
+
+### `public Graph<T> findMST(Graph<T> graph)`
+
+Finds the Minimum Spanning Tree (MST) of a given graph using Kruskal's algorithm.
+
+- **Parameters**:
+  - `graph`: The input `Graph<T>` for which to find the MST. It is assumed to be weighted and undirected.
+- **Returns**:
+  - A new `Graph<T>` object representing the Minimum Spanning Tree.
