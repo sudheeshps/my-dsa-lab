@@ -66,22 +66,6 @@ Here you'll find the core data structures, each with its own detailed `README.md
 
 Explore a variety of algorithms, complete with explanations and implementation details.
 
-### Graph Algorithms
-
-| Algorithm | Description |
-| :--- | :--- |
-| ⭐ [A* Search](./src/main/java/com/sudhi/dsa/algorithms/graph/AStar/README.md) | A pathfinding algorithm known for its performance and accuracy. |
-| 🔔 [Bellman-Ford](./src/main/java/com/sudhi/dsa/algorithms/graph/BellmanFord/README.md) | Finds the shortest paths from a single source vertex to all of the other vertices in a weighted digraph. |
-| 🗺️ [Dijkstra's Shortest Path](./src/main/java/com/sudhi/dsa/algorithms/graph/DijkstraShortestPath/README.md) | An algorithm for finding the shortest paths between nodes in a graph. |
-| 🌐 [Floyd-Warshall](./src/main/java/com/sudhi/dsa/algorithms/graph/FloydWarshall/README.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
-| 🌐 [Iterative Breadth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeBreadthFirstSearch/README.md) | A graph traversal algorithm that explores the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. |
-| 🚶 [Iterative Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
-| 📜 [Kahn's Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/KahnsTopologicalSort/README.md) | A topological sort algorithm. |
-| 🌳 [Kruskal's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/KruskalMST/README.md) | A minimum spanning tree algorithm. |
-| 🌲 [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
-| 🚶 [Recursive Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/RecursiveDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
-| 📜 [Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/TopologicalSort/README.md) | A linear ordering of the vertices of a directed acyclic graph. |
-
 ### Searching Algorithms
 
 | Algorithm | Description |
@@ -102,6 +86,22 @@ Explore a variety of algorithms, complete with explanations and implementation d
 | ⚡ [Quick Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/QuickSort/README.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
 | ✅ [Selection Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/SelectionSort/README.md) | A simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right and a sublist of the remaining unsorted items. |
 | 🐚 [Shell Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/ShellSort/README.md) | A generalization of insertion sort that allows the exchange of items that are far apart. |
+
+### Graph Algorithms
+
+| Algorithm | Description |
+| :--- | :--- |
+| ⭐ [A* Search](./src/main/java/com/sudhi/dsa/algorithms/graph/AStar/README.md) | A pathfinding algorithm known for its performance and accuracy. |
+| 🔔 [Bellman-Ford](./src/main/java/com/sudhi/dsa/algorithms/graph/BellmanFord/README.md) | Finds the shortest paths from a single source vertex to all of the other vertices in a weighted digraph. |
+| 🗺️ [Dijkstra's Shortest Path](./src/main/java/com/sudhi/dsa/algorithms/graph/DijkstraShortestPath/README.md) | An algorithm for finding the shortest paths between nodes in a graph. |
+| 🌐 [Floyd-Warshall](./src/main/java/com/sudhi/dsa/algorithms/graph/FloydWarshall/README.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
+| 🌐 [Iterative Breadth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeBreadthFirstSearch/README.md) | A graph traversal algorithm that explores the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. |
+| 🚶 [Iterative Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
+| 📜 [Kahn's Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/KahnsTopologicalSort/README.md) | A topological sort algorithm. |
+| 🌳 [Kruskal's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/KruskalMST/README.md) | A minimum spanning tree algorithm. |
+| 🌲 [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
+| 🚶 [Recursive Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/RecursiveDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
+| 📜 [Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/TopologicalSort/README.md) | A linear ordering of the vertices of a directed acyclic graph. |
 
 ---
 
@@ -132,4 +132,4 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.

@@ -1,0 +1,11 @@
+- This project is about building a reference for common datastructures and algorithms
+- It is entirely written in Java
+- Though it started by writing code and tests manually from scratch, Gemini is extensively used later
+- The documentation is entirely developed using Gemini 
+- It has mainly two packages
+  - datastructures
+  - algorithms
+- The whole code is unit tested
+- There is comprehensive documentation for each datastructure and algorithm
+- Drill down to the packages to understand the code
+- Refer README file for an overview of the project

@@ -1,6 +1,6 @@
 package com.sudhi.dsa.datastructures.Array;
 
-public class Array<T extends Comparable<T>> {
+public class Array<T> {
     private int capacity = 10; // Default capacity
     private int size = 0;
     private T[] array;
