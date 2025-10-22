@@ -1,28 +1,30 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.Queue.Queue;
-import org.junit.Assert;
-import org.junit.Test;
+import com.sudhi.dsa.datastructures.Queue;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class QueueTests {
 
     @Test
     public void givenEmptyQueue_whenIsEmpty_thenReturnsTrue() {
         Queue<Integer> queue = new Queue<>();
-        Assert.assertTrue(queue.isEmpty());
+        Assertions.assertTrue(queue.isEmpty());
     }
 
     @Test
     public void givenNonEmptyQueue_whenIsEmpty_thenReturnsFalse() {
         Queue<Integer> queue = new Queue<>();
         queue.enqueue(1);
-        Assert.assertFalse(queue.isEmpty());
+        Assertions.assertFalse(queue.isEmpty());
     }
 
     @Test
     public void givenEmptyQueue_whenSize_thenReturnsZero() {
         Queue<Integer> queue = new Queue<>();
-        Assert.assertEquals(0, queue.size());
+        Assertions.assertEquals(0, queue.size());
     }
 
     @Test
@@ -30,15 +32,15 @@ public class QueueTests {
         Queue<Integer> queue = new Queue<>();
         queue.enqueue(1);
         queue.enqueue(2);
-        Assert.assertEquals(2, queue.size());
+        Assertions.assertEquals(2, queue.size());
     }
 
     @Test
     public void givenQueue_whenEnqueue_thenElementIsAdded() {
         Queue<Integer> queue = new Queue<>();
         queue.enqueue(1);
-        Assert.assertEquals(1, queue.size());
-        Assert.assertEquals(Integer.valueOf(1), queue.peek());
+        Assertions.assertEquals(1, queue.size());
+        Assertions.assertEquals(Integer.valueOf(1), queue.peek());
     }
 
     @Test
@@ -46,14 +48,14 @@ public class QueueTests {
         Queue<Integer> queue = new Queue<>();
         queue.enqueue(1);
         queue.enqueue(2);
-        Assert.assertEquals(Integer.valueOf(1), queue.dequeue());
-        Assert.assertEquals(1, queue.size());
+        Assertions.assertEquals(Integer.valueOf(1), queue.dequeue());
+        Assertions.assertEquals(1, queue.size());
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void givenEmptyQueue_whenDequeue_thenThrowsException() {
         Queue<Integer> queue = new Queue<>();
-        queue.dequeue();
+        assertThrows(IndexOutOfBoundsException.class, () -> queue.dequeue());
     }
 
     @Test
@@ -61,13 +63,13 @@ public class QueueTests {
         Queue<Integer> queue = new Queue<>();
         queue.enqueue(1);
         queue.enqueue(2);
-        Assert.assertEquals(Integer.valueOf(1), queue.peek());
-        Assert.assertEquals(2, queue.size());
+        Assertions.assertEquals(Integer.valueOf(1), queue.peek());
+        Assertions.assertEquals(2, queue.size());
     }
 
     @Test
     public void givenEmptyQueue_whenPeek_thenReturnsNull() {
         Queue<Integer> queue = new Queue<>();
-        Assert.assertNull(queue.peek());
+        Assertions.assertNull(queue.peek());
     }
 }

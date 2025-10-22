@@ -1,11 +1,8 @@
 package com.sudhi.dsa.algorithms.searching;
 
-import com.sudhi.dsa.algorithms.searching.IterativeBinarySearch.IterativeBinarySearch;
-import com.sudhi.dsa.algorithms.searching.LinearSearch.LinearSearch;
-import com.sudhi.dsa.algorithms.searching.RecursiveBinarySearch.RecursiveBinarySearch;
-import com.sudhi.dsa.algorithms.searching.IterativeBinarySearch.IterativeBinarySearch;
-import com.sudhi.dsa.algorithms.searching.RecursiveBinarySearch.RecursiveBinarySearch;
-import static com.sudhi.dsa.algorithms.searching.SearchingAlgorithmFactory.SearchingAlgorithmType.LinearSearch;
+import com.sudhi.dsa.algorithms.searching.IterativeBinarySearch;
+import com.sudhi.dsa.algorithms.searching.LinearSearch;
+import com.sudhi.dsa.algorithms.searching.RecursiveBinarySearch;
 
 public class SearchingAlgorithmFactory <T extends Comparable<T>> {
     public enum SearchingAlgorithmType {

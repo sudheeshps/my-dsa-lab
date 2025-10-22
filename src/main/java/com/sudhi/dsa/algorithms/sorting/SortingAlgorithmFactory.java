@@ -1,5 +1,13 @@
 package com.sudhi.dsa.algorithms.sorting;
 
+import com.sudhi.dsa.algorithms.sorting.BubbleSort;
+import com.sudhi.dsa.algorithms.sorting.CountSort;
+import com.sudhi.dsa.algorithms.sorting.HeapSort;
+import com.sudhi.dsa.algorithms.sorting.InsertionSort;
+import com.sudhi.dsa.algorithms.sorting.MergeSort;
+import com.sudhi.dsa.algorithms.sorting.QuickSort;
+import com.sudhi.dsa.algorithms.sorting.SelectionSort;
+import com.sudhi.dsa.algorithms.sorting.ShellSort;
 import java.util.Comparator;
 
 public class SortingAlgorithmFactory<T extends Comparable<T>> {
@@ -8,28 +16,28 @@ public class SortingAlgorithmFactory<T extends Comparable<T>> {
                                                                                     Comparator<T> comparator) {
         switch (algorithm) {
             case BubbleSort -> {
-                return new com.sudhi.dsa.algorithms.sorting.BubbleSort.BubbleSort<>(elements, comparator);
+                return new BubbleSort<>(elements, comparator);
             }
             case InsertionSort -> {
-                return new com.sudhi.dsa.algorithms.sorting.InsertionSort.InsertionSort<>(elements, comparator);
+                return new InsertionSort<>(elements, comparator);
             }
             case MergeSort -> {
-                return new com.sudhi.dsa.algorithms.sorting.MergeSort.MergeSort<>(elements, comparator);
+                return new MergeSort<>(elements, comparator);
             }
             case QuickSort -> {
-                return new com.sudhi.dsa.algorithms.sorting.QuickSort.QuickSort<>(elements, comparator);
+                return new QuickSort<>(elements, comparator);
             }
             case SelectionSort -> {
-                return new com.sudhi.dsa.algorithms.sorting.SelectionSort.SelectionSort<>(elements, comparator);
+                return new SelectionSort<>(elements, comparator);
             }
             case ShellSort -> {
-                return new com.sudhi.dsa.algorithms.sorting.ShellSort.ShellSort<>(elements, comparator);
+                return new ShellSort<>(elements, comparator);
             }
             case HeapSort ->  {
-                return new com.sudhi.dsa.algorithms.sorting.HeapSort.HeapSort<>(elements, comparator);
+                return new HeapSort<>(elements, comparator);
             }
             case CountSort -> {
-                return (com.sudhi.dsa.algorithms.sorting.SortingAlgorithm<T>) new com.sudhi.dsa.algorithms.sorting.CountSort.CountSort<>((Integer[]) elements,
+                return (SortingAlgorithm<T>) new CountSort<>((Integer[]) elements,
                         (Comparator<Integer>) comparator);
             }
         }

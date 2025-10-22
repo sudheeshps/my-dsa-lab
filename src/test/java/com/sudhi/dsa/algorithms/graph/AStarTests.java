@@ -1,7 +1,7 @@
 package com.sudhi.dsa.algorithms.graph;
 
-import com.sudhi.dsa.algorithms.graph.AStar.AStar;
-import com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.algorithms.graph.AStar;
+import com.sudhi.dsa.datastructures.Graph;
 import org.junit.jupiter.api.Test;
 
 import java.awt.Point;

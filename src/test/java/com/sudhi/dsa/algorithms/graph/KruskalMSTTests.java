@@ -1,7 +1,7 @@
 package com.sudhi.dsa.algorithms.graph;
 
-import com.sudhi.dsa.algorithms.graph.KruskalMST.KruskalMST;
-import com.sudhi.dsa.datastructures.Graph.Graph;
+import com.sudhi.dsa.algorithms.graph.KruskalMST;
+import com.sudhi.dsa.datastructures.Graph;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

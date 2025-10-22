@@ -1,8 +1,8 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.Array.Array;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import com.sudhi.dsa.datastructures.Array;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayTests {
 
@@ -15,7 +15,7 @@ public class ArrayTests {
         array.add(10);
 
         // then
-        assertEquals("Array size should be 1 after one addition.", 1, array.size());
+        assertEquals(1, array.size(), "Array size should be 1 after one addition.");
     }
 
     @Test
@@ -28,7 +28,7 @@ public class ArrayTests {
         Integer element = array.get(0);
 
         // then
-        assertEquals("First element should be 10.", Integer.valueOf(10), element);
+        assertEquals(Integer.valueOf(10), element, "First element should be 10.");
     }
 
     @Test
@@ -43,8 +43,8 @@ public class ArrayTests {
         Integer secondElement = array.get(1);
 
         // then
-        assertEquals("First element should be 10.", Integer.valueOf(10), firstElement);
-        assertEquals("Second element should be 20.", Integer.valueOf(20), secondElement);
+        assertEquals(Integer.valueOf(10), firstElement, "First element should be 10.");
+        assertEquals(Integer.valueOf(20), secondElement, "Second element should be 20.");
     }
 
     @Test
@@ -57,7 +57,7 @@ public class ArrayTests {
         array.remove(0);
 
         // then
-        assertEquals("Array size should be 0 after removing the only element.", 0, array.size());
+        assertEquals(0, array.size(), "Array size should be 0 after removing the only element.");
     }
 
     @Test
@@ -71,7 +71,7 @@ public class ArrayTests {
         array.remove(0);
 
         // then
-        assertEquals("Element at index 0 should now be 20.", Integer.valueOf(20), array.get(0));
+        assertEquals(Integer.valueOf(20), array.get(0), "Element at index 0 should now be 20.");
     }
     
     @Test
@@ -85,7 +85,7 @@ public class ArrayTests {
         Integer removedElement = array.remove(0);
 
         // then
-        assertEquals("Removed element should be 10.", Integer.valueOf(10), removedElement);
+        assertEquals(Integer.valueOf(10), removedElement, "Removed element should be 10.");
     }
 
     @Test
@@ -97,26 +97,26 @@ public class ArrayTests {
         int size = array.size();
 
         // then
-        assertEquals("Size of new array should be 0.", 0, size);
+        assertEquals(0, size, "Size of new array should be 0.");
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void testGet_whenIndexIsOutOfBounds_throwsException() {
         // given
         Array<Integer> array = new Array<>(Integer.class);
         array.add(10);
 
         // when
-        array.get(1); // Should throw
+        assertThrows(IndexOutOfBoundsException.class, () -> array.get(1)); // Should throw
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
+    @Test
     public void testRemove_whenIndexIsOutOfBounds_throwsException() {
         // given
         Array<Integer> array = new Array<>(Integer.class);
         array.add(10);
 
         // when
-        array.remove(1); // Should throw
+        assertThrows(IndexOutOfBoundsException.class, () -> array.remove(1)); // Should throw
     }
 }

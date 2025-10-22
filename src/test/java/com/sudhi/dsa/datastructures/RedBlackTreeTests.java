@@ -1,6 +1,6 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.RedBlackTree.RedBlackTree;
+import com.sudhi.dsa.datastructures.RedBlackTree;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

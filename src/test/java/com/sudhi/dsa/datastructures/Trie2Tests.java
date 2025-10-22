@@ -1,8 +1,8 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.Trie2.Trie2;
-import org.junit.Assert;
-import org.junit.Test;
+import com.sudhi.dsa.datastructures.Trie2;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Trie2Tests {
     @Test
@@ -12,11 +12,11 @@ public class Trie2Tests {
         for (String word: words) {
             trie2.insert(word);
         }
-        Assert.assertEquals(2, trie2.countOfWord("apple"));
-        Assert.assertEquals(1, trie2.countOfWord("word"));
-        Assert.assertEquals(1, trie2.countOfWord("ap"));
-        Assert.assertEquals(2, trie2.countOfWord("apps"));
-        Assert.assertEquals(0, trie2.countOfWord("world"));
+        Assertions.assertEquals(2, trie2.countOfWord("apple"));
+        Assertions.assertEquals(1, trie2.countOfWord("word"));
+        Assertions.assertEquals(1, trie2.countOfWord("ap"));
+        Assertions.assertEquals(2, trie2.countOfWord("apps"));
+        Assertions.assertEquals(0, trie2.countOfWord("world"));
     }
     @Test
     public void givenTrie_whenCountPrefix_thenCorrectCount() {
@@ -25,10 +25,10 @@ public class Trie2Tests {
         for (String word: words) {
             trie2.insert(word);
         }
-        Assert.assertEquals(4, trie2.countStartsWith("app"));
-        Assert.assertEquals(2, trie2.countStartsWith("wo"));
-        Assert.assertEquals(5, trie2.countStartsWith("ap"));
-        Assert.assertEquals(0, trie2.countStartsWith("foo"));
+        Assertions.assertEquals(4, trie2.countStartsWith("app"));
+        Assertions.assertEquals(2, trie2.countStartsWith("wo"));
+        Assertions.assertEquals(5, trie2.countStartsWith("ap"));
+        Assertions.assertEquals(0, trie2.countStartsWith("foo"));
     }
     @Test
     public void givenTrie_whenEraseWord_thenWordIsRemoved() {
@@ -37,17 +37,17 @@ public class Trie2Tests {
         for (String word: words) {
             trie2.insert(word);
         }
-        Assert.assertEquals(2, trie2.countOfWord("apple"));
-        Assert.assertEquals(1, trie2.countOfWord("word"));
-        Assert.assertEquals(1, trie2.countOfWord("ap"));
+        Assertions.assertEquals(2, trie2.countOfWord("apple"));
+        Assertions.assertEquals(1, trie2.countOfWord("word"));
+        Assertions.assertEquals(1, trie2.countOfWord("ap"));
 
         trie2.erase("apple");
         trie2.erase("apple");
         trie2.erase("apps");
-        Assert.assertEquals(0, trie2.countOfWord("apple"));
-        Assert.assertEquals(1, trie2.countOfWord("apps"));
-        Assert.assertEquals(1, trie2.countStartsWith("app"));
-        Assert.assertEquals(2, trie2.countStartsWith("ap"));
-        Assert.assertEquals(0, trie2.countStartsWith("foo"));
+        Assertions.assertEquals(0, trie2.countOfWord("apple"));
+        Assertions.assertEquals(1, trie2.countOfWord("apps"));
+        Assertions.assertEquals(1, trie2.countStartsWith("app"));
+        Assertions.assertEquals(2, trie2.countStartsWith("ap"));
+        Assertions.assertEquals(0, trie2.countStartsWith("foo"));
     }
 }

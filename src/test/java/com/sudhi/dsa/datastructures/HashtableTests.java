@@ -1,8 +1,8 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.Hashtable.Hashtable;
-import org.junit.Assert;
-import org.junit.Test;
+import com.sudhi.dsa.datastructures.Hashtable;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -17,14 +17,14 @@ public class HashtableTests {
             hashtable.put(501, "Anu");
             hashtable.put(400, "Bob");
             hashtable.put(300, "Nana"); // This should update the value for key 300
-            Assert.assertFalse(hashtable.isEmpty());
-            Assert.assertEquals(5, hashtable.size()); // Size should be 5 because a key was updated, not added
-            Assert.assertEquals("Ahan", hashtable.get(100));
-            Assert.assertEquals("Nana", hashtable.get(300)); // The new value should be returned
-            Assert.assertEquals("Bob", hashtable.get(400));
-            Assert.assertNull(hashtable.get(1000));
+            Assertions.assertFalse(hashtable.isEmpty());
+            Assertions.assertEquals(5, hashtable.size()); // Size should be 5 because a key was updated, not added
+            Assertions.assertEquals("Ahan", hashtable.get(100));
+            Assertions.assertEquals("Nana", hashtable.get(300)); // The new value should be returned
+            Assertions.assertEquals("Bob", hashtable.get(400));
+            Assertions.assertNull(hashtable.get(1000));
         }catch (Exception ex) {
-            Assert.fail("Test threw an exception: " + ex.getMessage());
+            Assertions.fail("Test threw an exception: " + ex.getMessage());
         }
     }
     @Test
@@ -37,14 +37,14 @@ public class HashtableTests {
             hashtable.put("501", "Anu");
             hashtable.put("400", "Bob");
             hashtable.put("300", "Nana"); // This should update the value for key "300"
-            Assert.assertFalse(hashtable.isEmpty());
-            Assert.assertEquals(5, hashtable.size()); // Size should be 5
-            Assert.assertEquals("Ahan", hashtable.get("100"));
-            Assert.assertEquals("Nana", hashtable.get("300")); // The new value should be returned
-            Assert.assertEquals("Bob", hashtable.get("400"));
-            Assert.assertNull(hashtable.get("1000"));
+            Assertions.assertFalse(hashtable.isEmpty());
+            Assertions.assertEquals(5, hashtable.size()); // Size should be 5
+            Assertions.assertEquals("Ahan", hashtable.get("100"));
+            Assertions.assertEquals("Nana", hashtable.get("300")); // The new value should be returned
+            Assertions.assertEquals("Bob", hashtable.get("400"));
+            Assertions.assertNull(hashtable.get("1000"));
         }catch (Exception ex) {
-            Assert.fail("Test threw an exception: " + ex.getMessage());
+            Assertions.fail("Test threw an exception: " + ex.getMessage());
         }
     }
     @Test
@@ -60,11 +60,11 @@ public class HashtableTests {
             // The keys are unique, so there should be 5 keys.
             Integer[] keys = {100, 121, 300, 501, 400};
             var keySet = hashtable.getKeySet();
-            Assert.assertEquals(5, keySet.size());
-            Assert.assertTrue(keySet.containsAll(List.of(keys)));
-            Assert.assertTrue(List.of(keys).containsAll(keySet));
+            Assertions.assertEquals(5, keySet.size());
+            Assertions.assertTrue(keySet.containsAll(List.of(keys)));
+            Assertions.assertTrue(List.of(keys).containsAll(keySet));
         }catch (Exception ex) {
-            Assert.fail("Test threw an exception: " + ex.getMessage());
+            Assertions.fail("Test threw an exception: " + ex.getMessage());
         }
     }
     @Test
@@ -80,11 +80,11 @@ public class HashtableTests {
             // The values should reflect the final state of the hashtable.
             String[] values = {"Ahan", "Amol", "Nana", "Anu", "Bob"};
             var valueSet = hashtable.getValues();
-            Assert.assertEquals(5, valueSet.size());
-            Assert.assertTrue(valueSet.containsAll(List.of(values)));
-            Assert.assertTrue(List.of(values).containsAll(valueSet));
+            Assertions.assertEquals(5, valueSet.size());
+            Assertions.assertTrue(valueSet.containsAll(List.of(values)));
+            Assertions.assertTrue(List.of(values).containsAll(valueSet));
         }catch (Exception ex) {
-            Assert.fail("Test threw an exception: " + ex.getMessage());
+            Assertions.fail("Test threw an exception: " + ex.getMessage());
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.Stack.Stack;
+import com.sudhi.dsa.datastructures.Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

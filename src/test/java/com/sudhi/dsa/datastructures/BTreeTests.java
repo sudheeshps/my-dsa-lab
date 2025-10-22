@@ -1,6 +1,4 @@
 package com.sudhi.dsa.datastructures;
-
-import com.sudhi.dsa.datastructures.BTree.BTree;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +18,7 @@ public class BTreeTests {
 
     @Test
     void givenNewBTree_whenCreated_thenRootIsLeafAndHasNoKeys() {
-        BTree<Integer>.BTreeNode root = bTree.getRoot();
+        BTree.BTreeNode root = bTree.getRoot();
         assertTrue(root.leaf);
         assertEquals(0, root.n);
     }
@@ -28,7 +26,7 @@ public class BTreeTests {
     @Test
     void givenBTree_whenSingleElementInserted_thenRootHasOneKey() {
         bTree.insert(10);
-        BTree<Integer>.BTreeNode root = bTree.getRoot();
+        BTree.BTreeNode root = bTree.getRoot();
         assertEquals(1, root.n);
         assertEquals(10, root.keys[0]);
     }
@@ -54,19 +52,19 @@ public class BTreeTests {
         bTree.insert(50);
         bTree.insert(60); // This should cause a split
 
-        BTree<Integer>.BTreeNode root = bTree.getRoot();
+        BTree.BTreeNode root = bTree.getRoot();
         assertEquals(1, root.n);
         assertEquals(30, root.keys[0]);
         assertFalse(root.leaf);
-        assertNotNull(root.C[0]);
-        assertNotNull(root.C[1]);
+        assertNotNull(root.children[0]);
+        assertNotNull(root.children[1]);
 
-        BTree<Integer>.BTreeNode leftChild = root.C[0];
+        BTree.BTreeNode leftChild = root.children[0];
         assertEquals(2, leftChild.n);
         assertEquals(10, leftChild.keys[0]);
         assertEquals(20, leftChild.keys[1]);
 
-        BTree<Integer>.BTreeNode rightChild = root.C[1];
+        BTree.BTreeNode rightChild = root.children[1];
         assertEquals(3, rightChild.n);
         assertEquals(40, rightChild.keys[0]);
         assertEquals(50, rightChild.keys[1]);

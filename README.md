@@ -43,22 +43,22 @@ Here you'll find the core data structures, each with its own detailed `README.md
 
 | Data Structure | Description |
 | :--- | :--- |
-| 🔢 [Array](./src/main/java/com/sudhi/dsa/datastructures/Array/README.md) | A basic fixed-size collection of elements. |
-| 🌳 [AVLTree](./src/main/java/com/sudhi/dsa/datastructures/AVLTree/README.md) | A self-balancing binary search tree. |
-| 🅱️ [BTree](./src/main/java/com/sudhi/dsa/datastructures/BTree/README.md) | A self-balancing tree optimized for databases and filesystems. |
-| ↔️ [Deque](./src/main/java/com/sudhi/dsa/datastructures/Deque/README.md) | A double-ended queue. |
-| 🔗 [DoublyLinkedList](./src/main/java/com/sudhi/dsa/datastructures/DoublyLinkedList/README.md) | A linked list where each node has pointers to the next and previous nodes. |
-| 🕸️ [Graph](./src/main/java/com/sudhi/dsa/datastructures/Graph/README.md) | A collection of vertices and edges. |
-| #️⃣ [Hashtable](./src/main/java/com/sudhi/dsa/datastructures/Hashtable/README.md) | A data structure that implements an associative array abstract data type. |
-| ⛓️ [LinkedList](./src/main/java/com/sudhi/dsa/datastructures/LinkedList/README.md) | A linear collection of data elements whose order is not given by their physical placement in memory. |
-| 🔝 [PriorityQueue](./src/main/java/com/sudhi/dsa/datastructures/PriorityQueue/README.md) | A type of queue in which each element has a "priority" associated with it. |
-| ➡️ [Queue](./src/main/java/com/sudhi/dsa/datastructures/Queue/README.md) | A collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end. |
-| 🌳 [RedBlackTree](./src/main/java/com/sudhi/dsa/datastructures/RedBlackTree/README.md) | A self-balancing binary search tree. |
-| 🛡️ [Set](./src/main/java/com/sudhi/dsa/datastructures/Set/README.md) | A collection of distinct elements. |
-| 📚 [Stack](./src/main/java/com/sudhi/dsa/datastructures/Stack/README.md) | A collection of elements with two principal operations: push, which adds an element to the collection, and pop, which removes the most recently added element. |
-| 🌲 [Tree](./src/main/java/com/sudhi/dsa/datastructures/Tree/README.md) | A hierarchical data structure. |
-| 🔤 [Trie](./src/main/java/com/sudhi/dsa/datastructures/Trie/README.md) | A tree-like data structure that stores a dynamic set of strings. |
-| 🔤 [Trie2](./src/main/java/com/sudhi/dsa/datastructures/Trie2/README.md) | An alternative implementation of a Trie. |
+| 🔢 [Array](./docs/datastructures/Array.md) | A basic fixed-size collection of elements. |
+| 🌳 [AVLTree](./docs/datastructures/AVLTree.md) | A self-balancing binary search tree. |
+| 🅱️ [BTree](./docs/datastructures/BTree.md) | A self-balancing tree optimized for databases and filesystems. |
+| ↔️ [Deque](./docs/datastructures/Deque.md) | A double-ended queue. |
+| 🔗 [DoublyLinkedList](./docs/datastructures/DoublyLinkedList.md) | A linked list where each node has pointers to the next and previous nodes. |
+| 🕸️ [Graph](./docs/datastructures/Graph.md) | A collection of vertices and edges. |
+| #️⃣ [Hashtable](./docs/datastructures/Hashtable.md) | A data structure that implements an associative array abstract data type. |
+| ⛓️ [LinkedList](./docs/datastructures/LinkedList.md) | A linear collection of data elements whose order is not given by their physical placement in memory. |
+| 🔝 [PriorityQueue](./docs/datastructures/PriorityQueue.md) | A type of queue in which each element has a "priority" associated with it. |
+| ➡️ [Queue](./docs/datastructures/Queue.md) | A collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end. |
+| 🌳 [RedBlackTree](./docs/datastructures/RedBlackTree.md) | A self-balancing binary search tree. |
+| 🛡️ [Set](./docs/datastructures/Set.md) | A collection of distinct elements. |
+| 📚 [Stack](./docs/datastructures/Stack.md) | A collection of elements with two principal operations: push, which adds an element to the collection, and pop, which removes the most recently added element. |
+| 🌲 [Tree](./docs/datastructures/Tree.md) | A hierarchical data structure. |
+| 🔤 [Trie](./docs/datastructures/Trie.md) | A tree-like data structure that stores a dynamic set of strings. |
+| 🔤 [Trie2](./docs/datastructures/Trie2.md) | An alternative implementation of a Trie. |
 
 ---
 
@@ -70,38 +70,38 @@ Explore a variety of algorithms, complete with explanations and implementation d
 
 | Algorithm | Description |
 | :--- | :--- |
-| 🔍 [Linear Search](./src/main/java/com/sudhi/dsa/algorithms/searching/LinearSearch/README.md) | A simple search that sequentially checks each element of a list. |
-| 🎯 [Iterative Binary Search](./src/main/java/com/sudhi/dsa/algorithms/searching/IterativeBinarySearch/README.md) | An efficient search algorithm that finds the position of a target value within a sorted array. |
-| 🎯 [Recursive Binary Search](./src/main/java/com/sudhi/dsa/algorithms/searching/RecursiveBinarySearch/README.md) | A recursive implementation of the binary search algorithm. |
+| 🔍 [Linear Search](./docs/algorithms/LinearSearch.md) | A simple search that sequentially checks each element of a list. |
+| 🎯 [Iterative Binary Search](./docs/algorithms/IterativeBinarySearch.md) | An efficient search algorithm that finds the position of a target value within a sorted array. |
+| 🎯 [Recursive Binary Search](./docs/algorithms/RecursiveBinarySearch.md) | A recursive implementation of the binary search algorithm. |
 
 ### Sorting Algorithms
 
 | Algorithm | Description |
 | :--- | :--- |
-| 🧼 [Bubble Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/BubbleSort/README.md) | A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. |
-| 🔢 [Count Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/CountSort/README.md) | An integer sorting algorithm that operates by counting the number of objects that have each distinct key value. |
-| 堆 [Heap Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/HeapSort/README.md) | A comparison-based sorting algorithm that uses a binary heap data structure. |
-| 👉 [Insertion Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/InsertionSort/README.md) | A simple sorting algorithm that builds the final sorted array one item at a time. |
-| 🔀 [Merge Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/MergeSort/README.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
-| ⚡ [Quick Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/QuickSort/README.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
-| ✅ [Selection Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/SelectionSort/README.md) | A simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right and a sublist of the remaining unsorted items. |
-| 🐚 [Shell Sort](./src/main/java/com/sudhi/dsa/algorithms/sorting/ShellSort/README.md) | A generalization of insertion sort that allows the exchange of items that are far apart. |
+| 🧼 [Bubble Sort](./docs/algorithms/BubbleSort.md) | A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. |
+| 🔢 [Count Sort](./docs/algorithms/CountSort.md) | An integer sorting algorithm that operates by counting the number of objects that have each distinct key value. |
+| 堆 [Heap Sort](./docs/algorithms/HeapSort.md) | A comparison-based sorting algorithm that uses a binary heap data structure. |
+| 👉 [Insertion Sort](./docs/algorithms/InsertionSort.md) | A simple sorting algorithm that builds the final sorted array one item at a time. |
+| 🔀 [Merge Sort](./docs/algorithms/MergeSort.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
+| ⚡ [Quick Sort](./docs/algorithms/QuickSort.md) | An efficient, comparison-based, divide-and-conquer sorting algorithm. |
+| ✅ [Selection Sort](./docs/algorithms/SelectionSort.md) | A simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right and a sublist of the remaining unsorted items. |
+| 🐚 [Shell Sort](./docs/algorithms/ShellSort.md) | A generalization of insertion sort that allows the exchange of items that are far apart. |
 
 ### Graph Algorithms
 
 | Algorithm | Description |
 | :--- | :--- |
-| ⭐ [A* Search](./src/main/java/com/sudhi/dsa/algorithms/graph/AStar/README.md) | A pathfinding algorithm known for its performance and accuracy. |
-| 🔔 [Bellman-Ford](./src/main/java/com/sudhi/dsa/algorithms/graph/BellmanFord/README.md) | Finds the shortest paths from a single source vertex to all of the other vertices in a weighted digraph. |
-| 🗺️ [Dijkstra's Shortest Path](./src/main/java/com/sudhi/dsa/algorithms/graph/DijkstraShortestPath/README.md) | An algorithm for finding the shortest paths between nodes in a graph. |
-| 🌐 [Floyd-Warshall](./src/main/java/com/sudhi/dsa/algorithms/graph/FloydWarshall/README.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
-| 🌐 [Iterative Breadth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeBreadthFirstSearch/README.md) | A graph traversal algorithm that explores the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. |
-| 🚶 [Iterative Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/IterativeDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
-| 📜 [Kahn's Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/KahnsTopologicalSort/README.md) | A topological sort algorithm. |
-| 🌳 [Kruskal's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/KruskalMST/README.md) | A minimum spanning tree algorithm. |
-| 🌲 [Prim's MST](./src/main/java/com/sudhi/dsa/algorithms/graph/PrimMST/README.md) | A minimum spanning tree algorithm. |
-| 🚶 [Recursive Depth-First Search](./src/main/java/com/sudhi/dsa/algorithms/graph/RecursiveDepthFirstSearch/README.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
-| 📜 [Topological Sort](./src/main/java/com/sudhi/dsa/algorithms/graph/TopologicalSort/README.md) | A linear ordering of the vertices of a directed acyclic graph. |
+| ⭐ [A* Search](./docs/algorithms/AStar.md) | A pathfinding algorithm known for its performance and accuracy. |
+| 🔔 [Bellman-Ford](./docs/algorithms/BellmanFord.md) | Finds the shortest paths from a single source vertex to all of the other vertices in a weighted digraph. |
+| 🗺️ [Dijkstra's Shortest Path](./docs/algorithms/DijkstraShortestPath.md) | An algorithm for finding the shortest paths between nodes in a graph. |
+| 🌐 [Floyd-Warshall](./docs/algorithms/FloydWarshall.md) | An algorithm for finding shortest paths in a weighted graph with positive or negative edge weights. |
+| 🌐 [Iterative Breadth-First Search](./docs/algorithms/IterativeBreadthFirstSearch.md) | A graph traversal algorithm that explores the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. |
+| 🚶 [Iterative Depth-First Search](./docs/algorithms/IterativeDepthFirstSearch.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
+| 📜 [Kahn's Topological Sort](./docs/algorithms/KahnsTopologicalSort.md) | A topological sort algorithm. |
+| 🌳 [Kruskal's MST](./docs/algorithms/KruskalMST.md) | A minimum spanning tree algorithm. |
+| 🌲 [Prim's MST](./docs/algorithms/PrimMST.md) | A minimum spanning tree algorithm. |
+| 🚶 [Recursive Depth-First Search](./docs/algorithms/RecursiveDepthFirstSearch.md) | A graph traversal algorithm that explores as far as possible along each branch before backtracking. |
+| 📜 [Topological Sort](./docs/algorithms/TopologicalSort.md) | A linear ordering of the vertices of a directed acyclic graph. |
 
 ---
 

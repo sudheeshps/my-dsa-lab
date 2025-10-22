@@ -1,6 +1,6 @@
 package com.sudhi.dsa.datastructures;
 
-import com.sudhi.dsa.datastructures.LinkedList.LinkedList;
+import com.sudhi.dsa.datastructures.LinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

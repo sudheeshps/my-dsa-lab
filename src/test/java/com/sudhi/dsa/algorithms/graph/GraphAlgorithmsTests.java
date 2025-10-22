@@ -1,13 +1,13 @@
 package com.sudhi.dsa.algorithms.graph;
 
-import com.sudhi.dsa.algorithms.graph.IterativeBreadthFirstSearch.IterativeBreadthFirstSearch;
-import com.sudhi.dsa.algorithms.graph.IterativeDepthFirstSearch.IterativeDepthFirstSearch;
-import com.sudhi.dsa.algorithms.graph.KahnsTopologicalSort.KahnsTopologicalSort;
-import com.sudhi.dsa.algorithms.graph.RecursiveDepthFirstSearch.RecursiveDepthFirstSearch;
-import com.sudhi.dsa.algorithms.graph.TopologicalSort.TopologicalSort;
-import com.sudhi.dsa.datastructures.Graph.Graph;
-import org.junit.Assert;
-import org.junit.Test;
+import com.sudhi.dsa.algorithms.graph.IterativeBreadthFirstSearch;
+import com.sudhi.dsa.algorithms.graph.IterativeDepthFirstSearch;
+import com.sudhi.dsa.algorithms.graph.KahnsTopologicalSort;
+import com.sudhi.dsa.algorithms.graph.RecursiveDepthFirstSearch;
+import com.sudhi.dsa.algorithms.graph.TopologicalSort;
+import com.sudhi.dsa.datastructures.Graph;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,7 +52,7 @@ public class GraphAlgorithmsTests {
         expected.add(new Graph.Vertex<>('E'));
         expected.add(new Graph.Vertex<>('F'));
         expected.add(new Graph.Vertex<>('G'));
-        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+        Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
     @Test
     public void givenGraph_whenKahnsTopologicalSort_thenCorrectOrder() {
@@ -92,7 +92,7 @@ public class GraphAlgorithmsTests {
         expected.add(new Graph.Vertex<>('E'));
         expected.add(new Graph.Vertex<>('F'));
         expected.add(new Graph.Vertex<>('G'));
-        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+        Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
     @Test
     public void givenGraph_whenBfs_thenCorrectOrder() {
@@ -133,7 +133,7 @@ public class GraphAlgorithmsTests {
         expected.add(new Graph.Vertex<>('D'));
         expected.add(new Graph.Vertex<>('F'));
         expected.add(new Graph.Vertex<>('G'));
-        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+        Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
     @Test
     public void givenGraph_whenDfs_thenCorrectOrder() {
@@ -174,7 +174,7 @@ public class GraphAlgorithmsTests {
         expected.add(new Graph.Vertex<>('F'));
         expected.add(new Graph.Vertex<>('E'));
         expected.add(new Graph.Vertex<>('G'));
-        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+        Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
     @Test
     public void givenGraph_whenIterativeDfs_thenCorrectOrder() {
@@ -215,6 +215,6 @@ public class GraphAlgorithmsTests {
         expected.add(new Graph.Vertex<>('G'));
         expected.add(new Graph.Vertex<>('D'));
         expected.add(new Graph.Vertex<>('B'));
-        Assert.assertArrayEquals(expected.toArray(), result.toArray());
+        Assertions.assertArrayEquals(expected.toArray(), result.toArray());
     }
 }
